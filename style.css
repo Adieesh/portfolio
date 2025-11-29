@@ -316,7 +316,7 @@ header {
   max-width: 600px;
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+  transition: opacity 0.8s ease-out 0.1s, transform 0.8s ease-out 0.1s;
 }
 
 .about-para.animate-in {
@@ -515,6 +515,21 @@ header {
   background-position: center;
 }
 
+/* GitHub cursor for first 3 projects */
+.project-1:hover,
+.project-2:hover,
+.project-3:hover {
+  cursor: url("cursor/git-cursor.png") 16 16, pointer;
+}
+
+.project-4:hover,
+.project-5:hover,
+.project-6:hover {
+  cursor: url("cursor/play-cursor.png") 16 16, pointer;
+}
+
+
+
 /* replace these backgrounds with your own images if you want */
 .thumb-1 {
   background-image: url("assests 2/skills/logo.png");
@@ -528,7 +543,7 @@ header {
   background-image: url("assests 2/projects/Screenshot 2025-11-27 191721.png");
 }
 
-.thumb-4 {
+/*  .thumb-4 {
   background-image: url("assests 2/projects/reduced bullet time.gif");
 }
 
@@ -538,6 +553,39 @@ header {
 
 .thumb-6 {
   background-image: url("assests 2/projects/reduced cr.gif");
+}*/
+
+/* Project preview video */
+.project-thumb {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.project-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none; /* prevents weird touches */
+}
+
+/* Keeps video card smooth on mobile */
+.project-card {
+  will-change: transform, box-shadow;
+}
+
+.project-thumb {
+  will-change: transform, opacity;
+}
+
+/* Optional: disable heavy hover on mobile */
+@media (max-width: 768px) {
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .project-thumb::after {
