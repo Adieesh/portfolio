@@ -431,7 +431,6 @@ header {
   animation: fadeInUpSkills 1s ease-out forwards;
 }
 
-
 /* PAPER TEAR DIVIDER */
 .section-tear {
   width: 100%;
@@ -447,7 +446,6 @@ header {
   height: auto;
   pointer-events: none;  /* so it doesn’t block clicks */
 }
-
 
 
 /* GENERIC SECTION WRAPPER */
