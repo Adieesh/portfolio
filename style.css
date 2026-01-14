@@ -517,9 +517,12 @@ header {
 
 /* GitHub cursor for first 3 projects */
 .project-1:hover,
-.project-2:hover,
-.project-3:hover {
+.project-2:hover {
   cursor: url("cursor/git-cursor.png") 16 16, pointer;
+}
+
+.project-3:hover {
+  cursor: url("cursor/figma cursor.png") 16 16, pointer;
 }
 
 .project-4:hover,
@@ -540,7 +543,7 @@ header {
 }
 
 .thumb-3 {
-  background-image: url("assests 2/projects/Screenshot 2025-11-27 191721.png");
+  background-image: url("assests 2/projects/website.jpg");
 }
 
 /*  .thumb-4 {
