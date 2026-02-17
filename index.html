@@ -131,7 +131,7 @@
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <a href="https://github.com/Adieesh/SkillSim" target="_blank" class="project-link">
+        <a class="project-link">
         <article class="project-card project-1">
           <div class="project-thumb thumb-1">
             <div class="badge">Founder</div>
@@ -154,7 +154,7 @@
         </a>
 
         <!-- Project 2 -->
-          <a href="https://github.com/Adieesh/OmniFlow" target="_blank" class="project-link">
+          <a class="project-link">
         <article class="project-card project-2">
           <div class="project-thumb thumb-2">
             <div class="badge">Lead Developer</div>
@@ -177,7 +177,7 @@
         </a>
 
         <!-- Project 3 -->
-         <a href="https://www.figma.com/proto/ov2IGCAuxm7RbLAcYi3Ths/Untitled?node-id=1-3&scaling=scale-down-width&content-scaling=fixed&t=bhZG3iPOMw3Q30Jn-1" target="_blank" class="project-link">
+         <a class="project-link">
         <article class="project-card project-3">
           <div class="project-thumb thumb-3">
             <div class="badge">Designer</div>            
@@ -448,8 +448,226 @@
   <script src="scroll-animations.js"></script>
 
    
-  <footer></footer>
+ 
+<div class="case-overlay" id="case-skillsim">
+  <div class="case-box">
+    <button class="case-close">&times;</button>
 
+ <div class="case-hero">
+  <div class="case-hero-bg case-hero-skillsim"></div>
+
+  <img
+    src="assests 2/skills/logo.png"
+    alt="SkillSim Logo"
+    class="case-hero-img"
+  />
+</div>
+
+    <div class="case-inner">
+      <h2>SkillSim</h2>
+      <p class="case-tagline">Reverse Job Simulation Platform</p>
+
+      <div class="case-tags">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>UI Design</span>
+      </div>
+
+      <section>
+        <h3>Problem</h3>
+        <p>Most students learn concepts in isolation but rarely get the chance to apply them in realistic, work-like situations. This gap makes it difficult for students to understand how academic knowledge translates into practical skills and decision-making.</p>
+      </section>
+
+      <section>
+        <h3>Constraints</h3>
+        <p>The platform had to be beginner-friendly, low-friction, and accessible to high school students with varying technical backgrounds. It was built with limited resources, a simple tech stack, and a strong focus on usability over complexity.</p>
+      </section>
+
+      <section>
+        <h3>Decisions</h3>
+        <p>Instead of replicating full internships, I designed short, focused micro-task simulations that mirror real workplace challenges. This allowed users to learn through action while keeping the experience lightweight and approachable.</p>
+      </section>
+
+      <section>
+        <h3>Trade-offs</h3>
+        <p>To improve onboarding and accessibility, some real-world complexity was intentionally reduced. This meant prioritizing clarity and learning flow over complete realism, especially for first-time users.</p>
+      </section>
+
+      <section>
+        <h3>Outcome</h3>
+        <p>The result is a working prototype that enables students to engage with realistic tasks, reflect on their decisions, and learn through iteration. The platform demonstrates a clear learning loop and validates the effectiveness of simulation-based skill development.</p>
+      </section>
+
+      <section>
+        <h3>Future Scope</h3>
+        <ul>
+        <li>Data-driven task recommendations based on user performance</li>
+        <li>User behavior analysis to improve learning outcomes</li>
+        <li>Scalable backend architecture for multiple roles and simulations</li>
+        </ul>
+      </section>
+
+      <section>
+              <div class="contact-block">
+        <p class="contact-block-body">
+          <a href="https://github.com/Adieesh/SkillSim" target="_blank">Github</a><br>
+        </p>
+      </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="case-overlay" id="case-omniflow">
+  <div class="case-box">
+    <button class="case-close">&times;</button>
+
+    <div class="case-hero">
+  <div class="case-hero-bg case-hero-omniflow"></div>
+
+  <img
+    src="assests 2/projects/Screenshot 2025-11-27 184325.png"
+    alt="OmniFlow Dashboard"
+    class="case-hero-img"
+  />
+</div>
+
+
+    <div class="case-inner">
+      <h2>OmniFlow</h2>
+      <p class="case-tagline">Billing System & Analytics Dashboard</p>
+
+      <div class="case-tags">
+        <span>Python</span>
+        <span>MySQL</span>
+        <span>CustomTkinter</span>
+      </div>
+
+      <section>
+        <h3>System Overview: Desktop-first architecture with role-based access and local data storage</h3>
+        <img src="assests 2/projects/omni.png" alt="OmniFlow Dashboard Screenshot" style="height:470px;">
+        <p>Local MySQL Database (Orders, Customers, Transactions)</p>
+        <p>This diagram illustrates the core modules, user roles, and functional scope of the OmniFlow desktop application.</p>
+      </section>
+
+      <section>
+        <h3>Problem</h3>
+        <p>Small businesses often rely on fragmented tools or manual methods for billing and record-keeping, leading to inefficiencies, errors, and poor visibility into their operations.</p>
+      </section>
+
+      <section>
+        <h3>Constraints</h3>
+        <p>The system needed to function fully offline, respond quickly on low-end machines, and remain intuitive for non-technical users. The design also had to balance usability with reliable data handling.</p>
+      </section>
+
+      <section>
+        <h3>Decisions</h3>
+        <p>I chose a desktop-first architecture using Python and CustomTkinter, backed by a local MySQL database. This allowed tighter control over performance, data consistency, and offline reliability compared to a web-based solution.</p>
+      </section>
+
+      <section>
+        <h3>Trade-offs</h3>
+        <p>While the desktop approach limited horizontal scalability and remote access, it significantly improved responsiveness, reduced system complexity, and better suited the needs of small-scale users.</p>
+      </section>
+
+      <section class="outcome">
+        <h3>Outcome</h3>
+        <p>The final system provides stable billing, structured data storage, and basic analytics through a clean interface. It has been used to simulate real business workflows, validating both the design and technical approach.</p>
+      </section>
+
+      <section>
+        <h3>Technical Highlights</h3>
+        <ul>
+        <li>Normalized database schema for invoices, customers, and transactions</li>
+        <li>SQL-based data retrieval for analytics and summaries</li>
+        <li>Modular Python functions for billing logic and UI interaction</li>
+        </ul>
+      </section>
+
+      <section>
+                 <div class="contact-block">
+        <p class="contact-block-body">
+          <a href="https://github.com/Adieesh/OmniFlow" target="_blank">Github</a><br>
+        </p>
+      </div>   
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="case-overlay" id="case-school">
+  <div class="case-box">
+    <button class="case-close">&times;</button>
+
+    <div class="case-hero">
+  <div class="case-hero-bg case-hero-school"></div>
+
+  <img
+    src="assests 2/projects/website.jpg"
+    alt="School Management System Dashboard"
+    class="case-hero-img"
+  />
+</div>
+
+    <div class="case-inner">
+      <h2>School Website Redesign</h2>
+      <p class="case-tagline">Modernizing a Decade-Old Institutional Website</p>
+      <div class="case-tags">
+        <span>UI/UX</span>
+        <span>Web Redesign</span>
+        <span>Visual Design</span>
+      </div>
+
+      <section>
+        <h3>Problem</h3>
+        <p>The existing school website was outdated, cluttered, and difficult to navigate. Important information such as announcements, academic details, and contact resources was hard to find, leading to confusion for students, parents, and staff.</p>
+      </section>
+
+      <section>
+        <h3>Constraints</h3>
+        <p>The redesign had to work within an existing institutional structure, limited content ownership, and varied user needs. It also needed to be accessible to users with different levels of digital familiarity and remain easy to maintain by non-technical administrators.</p>
+      </section>
+
+      <section>
+        <h3>Decisions</h3>
+        <p>I focused on restructuring the information architecture and simplifying navigation before applying visual changes. A clean, modern interface with clear hierarchy was chosen to improve readability and usability across devices.</p>
+      </section>
+
+      <section>
+        <h3>Trade-offs</h3>
+        <p>Advanced interactivity and custom features were intentionally limited to ensure reliability and ease of maintenance. This allowed the website to remain lightweight and practical for long-term institutional use.</p>
+      </section>
+
+      <section class="outcome">
+        <h3>Outcome</h3>
+        <p>The redesigned website improved clarity, accessibility, and overall user experience. It was officially adopted and deployed by the school, validating the design decisions in a real-world environment.</p>
+      </section>
+
+      <section>
+        <h3>Design Highlights</h3>
+        <ul>
+        <li>Improved information hierarchy and navigation flow</li>
+        <li>Accessible color contrast and typography</li>
+        <li>Consistent visual system for institutional content</li>
+        </ul>
+      </section>
+
+      <section>
+                 <div class="contact-block">
+        <p class="contact-block-body">
+          <a href="https://www.figma.com/proto/ov2IGCAuxm7RbLAcYi3Ths/Untitled?node-id=1-3&scaling=scale-down-width&content-scaling=fixed&t=bwFQ3HFgx6bS54VB-1" target="_blank">Figma</a><br>
+        </p>
+      </div>   
+      </section>
+
+      
+
+    </div>
+  </div>
+</div>
+ <footer></footer>
 </body>
 
 </html>

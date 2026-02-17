@@ -499,6 +499,7 @@ header {
   border: 1px solid #262626;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -516,14 +517,6 @@ header {
 }
 
 /* GitHub cursor for first 3 projects */
-.project-1:hover,
-.project-2:hover {
-  cursor: url("cursor/git-cursor.png") 16 16, pointer;
-}
-
-.project-3:hover {
-  cursor: url("cursor/figma cursor.png") 16 16, pointer;
-}
 
 .project-4:hover,
 .project-5:hover,
@@ -1044,6 +1037,137 @@ header {
     border-radius: 12px;
   }
 }
+.case-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.case-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.case-overlay.closing {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+
+.case-box {
+  position: fixed;
+  background: #151515;
+  border-radius: 18px;
+  overflow-y: auto;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.9);
+  transition:
+    top 0.6s cubic-bezier(.22,1,.36,1),
+    left 0.6s cubic-bezier(.22,1,.36,1),
+    width 0.6s cubic-bezier(.22,1,.36,1),
+    height 0.6s cubic-bezier(.22,1,.36,1),
+    border-radius 0.6s ease,
+    transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+
+/* top image */
+.case-hero {
+  position: relative;
+  height: 45vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* blurred background */
+.case-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.25);
+  filter: blur(28px);
+  opacity: 0.45;
+}
+
+/* sharp foreground image */
+.case-hero-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.case-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.65)
+  );
+  z-index: 2;
+}
+
+/* reuse project thumbnails */
+.case-hero-skillsim { background-image: url("assests 2/skills/logo.png"); }
+.case-hero-omniflow { background-image: url("assests 2/projects/Screenshot 2025-11-27 184325.png"); }
+.case-hero-school   { background-image: url("assests 2/projects/website.jpg"); }
+
+.case-inner {
+  padding: 80px 10vw;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.case-inner h2 {
+  font-family: 'ImpactCustom';
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.case-tagline {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.case-tags span {
+  display: inline-block;
+  background: #232323;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-right: 6px;
+}
+
+.case-inner section {
+  margin-top: 36px;
+}
+
+.case-inner h3 {
+  color: #ffbf00;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.case-close {
+  position: fixed;
+  top: 28px;
+  right: 36px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+}
+
 
 
 /* RESPONSIVE ADJUSTMENTS */

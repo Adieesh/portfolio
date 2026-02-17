@@ -110,4 +110,63 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(el);
   });
 
+  function bindCase(cardSelector, popupId) {
+  const card = document.querySelector(cardSelector);
+  const popup = document.getElementById(popupId);
+  const box = popup.querySelector('.case-box');
+  const closeBtn = popup.querySelector('.case-close');
+
+  card.addEventListener('click', () => {
+    const rect = card.getBoundingClientRect();
+
+    box.style.top = rect.top + 'px';
+    box.style.left = rect.left + 'px';
+    box.style.width = rect.width + 'px';
+    box.style.height = rect.height + 'px';
+    box.style.borderRadius = '18px';
+
+    popup.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      box.style.top = '0';
+      box.style.left = '0';
+      box.style.width = '100vw';
+      box.style.height = '100vh';
+      box.style.borderRadius = '0';
+      box.style.transform = 'scale(1)';
+    });
+
+  });
+
+  closeBtn.addEventListener('click', () => {
+    const rect = card.getBoundingClientRect();
+
+    box.style.top = rect.top + 'px';
+    box.style.left = rect.left + 'px';
+    box.style.width = rect.width + 'px';
+    box.style.height = rect.height + 'px';
+    box.style.borderRadius = '18px';
+    box.style.transform = 'scale(0.98)';
+
+      setTimeout(() => {
+    popup.classList.add('closing');
+  }, 50);
+
+
+     setTimeout(() => {
+    popup.classList.remove('open', 'closing');
+    document.body.style.overflow = '';
+    box.style.transform = ''; // reset
+  }, 600);
+
+  });
+}
+
+// Bind all three
+bindCase('.project-1', 'case-skillsim');
+bindCase('.project-2', 'case-omniflow');
+bindCase('.project-3', 'case-school');
+
+
 });
