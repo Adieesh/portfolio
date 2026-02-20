@@ -518,11 +518,11 @@ header {
 
 /* GitHub cursor for first 3 projects */
 
-.project-4:hover,
+/*.project-4:hover,
 .project-5:hover,
 .project-6:hover {
   cursor: url("cursor/play-cursor.png") 16 16, pointer;
-}
+}*/
 
 
 
@@ -1125,8 +1125,10 @@ header {
 }
 
 .case-inner h2 {
-  font-family: 'ImpactCustom';
+  font-family: 'Impactcustom', sans-serif;
   font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
@@ -1168,7 +1170,12 @@ header {
   z-index: 10001;
 }
 
-
+.omniimg {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 1024px) {
